@@ -17,7 +17,7 @@ public class UserService {
         this.repository = repository;
     }
 
-   @Transactional
+    @Transactional
     public List<User> findAll() {
         return repository.findAll();
     }
@@ -27,5 +27,4 @@ public class UserService {
         return repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o ID: " + id));
     }
-
 }
